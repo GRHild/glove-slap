@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  phone_id: MyString
-  location: MyString
+  challenger_id: 
+  target_id: 
 
 two:
-  phone_id: MyString
-  location: MyString
+  challenger_id: 
+  target_id: 
