@@ -11,8 +11,17 @@ class SlapController < ApplicationController
     render :json => { status: "ok" }, :status => 200
   end
 
-  def update
-    ;
+  def accept
+    # Grab the target user by phone_id
+    @target = User.where(phone_id: params[:phone_id]).first
+    # Grab the slap record by slap_id
+    # @slap = Slap.where(id: params[:slap_id]).first
+    @slap = Slap.find(params[:slap_id])
+    # Compare target_id to target user's phone_id to make sure she's legit
+
+    # Update the slap record's status to "accept"
+    @slap.update(status: "accepted")
+    render :json => { status: "ok" }, :status => 200
   end
 
 end
