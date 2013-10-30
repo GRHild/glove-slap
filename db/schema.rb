@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20131027022942) do
     t.string   "phone_id"
     t.string   "location"
     t.string   "nickname"
+    t.string   "rank"
+    t.text     "img"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

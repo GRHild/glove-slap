@@ -4,6 +4,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :phone_id
       t.string :location
       t.string :nickname
+      t.string :rank
+      t.text :img
 
       t.timestamps
     end
