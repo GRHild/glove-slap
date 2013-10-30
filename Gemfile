@@ -40,6 +40,8 @@ end
 
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'twilio-ruby'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

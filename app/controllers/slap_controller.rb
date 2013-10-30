@@ -25,4 +25,16 @@ class SlapController < ApplicationController
     render :json => { status: "ok" }, :status => 200
   end
 
+  def slapping_message
+    # To find these visit https://www.twilio.com/user/account
+    account_sid = "ACaf5cee3c5f8b1c1b8afe3e04dd710ed7"
+    auth_token = "bfcc64ac2e63676e6143514b30e5ab62"
+
+    @client = Twilio::REST::Client.new account_sid, auth_token
+
+    @message = @client.account.messages.create({:to => "+18475630754",
+                                       :from => "+18475634169",
+                                       :body => "You've been slapped!"})
+  end
+
 end
