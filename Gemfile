@@ -8,6 +8,9 @@ gem 'pg'
 
 gem 'hirb'
 
+# Use Filepicker to generate url for images
+gem 'filepicker-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
