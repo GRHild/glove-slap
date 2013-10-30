@@ -36,6 +36,7 @@ class SlapController < ApplicationController
     @message = @client.account.messages.create({:to => "+18475630754",
                                        :from => "+18475634169",
                                        :body => "You've been slapped!"})
+  end
 
   # If target has been slapped, target can choose to reject the challenge
   def reject
