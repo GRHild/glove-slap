@@ -4,5 +4,6 @@ GloveSlap::Application.routes.draw do
     post "user/:user_id/slap" => "slap#create"
     post "slap/:slap_id/accept" => "slap#accept"
     post "slap/:slap_id/reject" => "slap#reject"
+    get "user/profile" => "user#show"
   end
 end
