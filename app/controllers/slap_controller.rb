@@ -11,6 +11,7 @@ class SlapController < ApplicationController
     render :json => { status: "ok" }, :status => 200
   end
 
+  # If target has been slapped, target can choose to accept the challenge
   def accept
     # Grab the target user by phone_id
     @target = User.where(phone_id: params[:phone_id]).first
@@ -35,6 +36,19 @@ class SlapController < ApplicationController
     @message = @client.account.messages.create({:to => "+18475630754",
                                        :from => "+18475634169",
                                        :body => "You've been slapped!"})
+
+  # If target has been slapped, target can choose to reject the challenge
+  def reject
+    # Grab the target user by phone_id
+    @target = User.where(phone_id: params[:phone_id]).first
+    # Grab the slap record by slap_id
+    @slap = Slap.find(params[:slap_id])
+    # Compare target_id to target user's phone_id to make sure she's legit
+    if @target.id == @slap.target_id
+      #Update the slap record's status to "rejected"
+      @slap.update(status: "rejected")
+    end
+    render :json => { status: "ok" }, :status => 200
   end
 
 end
