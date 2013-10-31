@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20131027022942) do
     t.string   "location"
     t.string   "nickname"
     t.string   "rank"
-    t.text     "img"
+    t.text     "avatar_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
