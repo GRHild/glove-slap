@@ -31,8 +31,11 @@ ActiveRecord::Schema.define(version: 20131027022942) do
     t.string   "phone_id"
     t.string   "location"
     t.string   "nickname"
+<<<<<<< Updated upstream
     t.string   "rank"
     t.text     "avatar_url"
+=======
+>>>>>>> Stashed changes
     t.datetime "created_at"
     t.datetime "updated_at"
   end
