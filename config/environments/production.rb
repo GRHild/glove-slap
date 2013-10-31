@@ -77,4 +77,7 @@ GloveSlap::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Filepicker
+  config.filepicker_rails.cdn_host = "Your CDN host name"
 end

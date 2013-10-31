@@ -25,5 +25,7 @@ module GloveSlap
         resource '*', :headers => :any, :methods => [:get, :post, :options]
       end
     end
+
+    config.filepicker_rails.api_key = "AhX3UoJb1QMqMmI5Ms3Ooz"
   end
 end
