@@ -14,13 +14,13 @@ class UserController < ApplicationController
     @nearby_users = User.all
 
     # returns nearby_users in json
-    render :json => @nearby_users.to_json , :status => 200
+    render :json => { :nearby_users => @nearby_users, :user => @user }, :status => 200
   end
 
   def show
-    # show all the users with nickname, ranks, 
+    # show all the users with nickname, ranks,
     @user = User.find_by(params[:id])
 
-    render :json => @nearby_users.to_json , :status => 200
+    render :json => @user.to_json , :status => 200
   end
 end
