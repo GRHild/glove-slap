@@ -5,4 +5,31 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-users = User.create([{ nickname: 'GRHild', location: '78752', phone_id: '1234', rank: 1, email: 'grhild@gmail.com' }, { nickname: 'Gmoney', location: '78752', phone_id: '1235', rank: 3, email: 'hild.gregory@gmail.com' }, { nickname: 'Amy', location: '', phone_id: '1236', rank: 2, email: 'amyhton@gmail.com' }])
+users = User.create([
+  {
+    nickname: 'GRHild',
+    latitude: 10.000,
+    longitude: -5.000,
+    phone_id: '1234',
+    rank: 3,
+    email: 'grhild@gmail.com'
+  },
+
+  {
+    nickname: 'Gmoney',
+    latitude: 11.000,
+    longitude: -4.000,
+    phone_id: '1235',
+    rank: 2,
+    email: 'hild.gregory@gmail.com'
+  },
+
+  {
+    nickname: 'Amy',
+    latitude: 30.000,
+    longitude: -34.000,
+    phone_id: 'Amy',
+    rank: 1,
+    email: 'amyhton@gmail.com'
+  }
+])
