@@ -8,9 +8,6 @@ gem 'pg'
 
 gem 'hirb'
 
-# Use Filepicker to generate url for images
-gem 'filepicker-rails'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -43,7 +40,6 @@ end
 
 gem 'rack-cors', :require => 'rack/cors'
 
-gem 'twilio-ruby'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
