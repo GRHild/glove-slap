@@ -19,6 +19,6 @@ class UserController < ApplicationController
 
   def show
     # show all the users with nickname, ranks, 
-    @user = User.find_by(:id)
+    @user = User.find_by(params[:id])
   end
 end
