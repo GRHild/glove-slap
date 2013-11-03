@@ -2,12 +2,12 @@ class UserController < ApplicationController
   def update_location
     # create new user with phone_id and location
     if User.where(phone_id: params[:phone_id]).blank?
-      @user = User.create(phone_id: params[:phone_id], location: params[:location])
+      @user = User.create(phone_id: params[:phone_id], latitude: params[:latitude], longitude: params[:longitude])
     else
       # find user in the database
       @user = User.where(phone_id: params[:phone_id]).first
       # update to the new location
-      @user.update(location: params[:location])
+      @user.update(latitude: params[:latitude], longitude: params[:longitude])
     end
 
     # find all users in the location
