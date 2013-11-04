@@ -43,6 +43,8 @@ gem 'rack-cors', :require => 'rack/cors'
 # Geocoder
 gem 'geocoder'
 
+gem 'gcm'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
