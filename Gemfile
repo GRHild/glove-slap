@@ -47,7 +47,6 @@ gem 'gcm'
 
 gem 'resque', '~> 2.0.0.pre.1', github: 'resque/resque'
 
-gem 'grape'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

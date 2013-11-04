@@ -6,6 +6,6 @@ GloveSlap::Application.routes.draw do
     post "slap/:slap_id/reject" => "slap#reject"
     get "user/profile" => "user#show"
 
-    post "user/:user_id/notification"
+    post "user/:user_id/notification" => "user#notification"
   end
 end
