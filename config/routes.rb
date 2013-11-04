@@ -1,4 +1,6 @@
 GloveSlap::Application.routes.draw do
+  get '#show'
+
   scope :api do
     post "user/location" => "user#update_location"
     post "user/:user_id/slap" => "slap#create"
@@ -6,6 +8,6 @@ GloveSlap::Application.routes.draw do
     post "slap/:slap_id/reject" => "slap#reject"
     get "user/profile" => "user#show"
 
-    post "user/:user_id/notification" => "user#notification"
+    post "user/notification" => "user#notification"
   end
 end
