@@ -49,5 +49,14 @@ users = User.create([
     phone_id: '9989',
     rank: 5,
     email: 'hild.gregory@gmail.com'
+  },
+
+  {
+    nickname: 'Nicole',
+    latitude: 30.269725,
+    longitude: -97.742654,
+    phone_id: '5656',
+    rank: 6,
+    email: 'nicole.pank@gmail.com'
   }
 ])
