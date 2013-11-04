@@ -10,8 +10,8 @@ class UserController < ApplicationController
       @user.update(latitude: params[:latitude], longitude: params[:longitude])
     end
 
-    # find all users in the location
-    @nearby_users = User.all
+    # find nearby users in the location
+    @nearby_users = User.near([@user.latitude, @user.longitude], 0.1)
 
     # returns nearby_users in json
     render :json => { :nearby_users => @nearby_users, :user => @user }, :status => 200
