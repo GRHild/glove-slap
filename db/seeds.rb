@@ -5,4 +5,49 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-users = User.create([{ nickname: 'GRHild', location: '78752', phone_id: '1234', rank: 1, email: 'grhild@gmail.com' }, { nickname: 'Gmoney', location: '78752', phone_id: '1235', rank: 3, email: 'hild.gregory@gmail.com' }, { nickname: 'Amy', location: '', phone_id: '1236', rank: 2, email: 'amyhton@gmail.com' }])
+users = User.create([
+  {
+    nickname: 'GRHild',
+    latitude: 30.2921168,
+    longitude: -97.72472259999999,
+    phone_id: '1234',
+    rank: 3,
+    email: 'grhild@gmail.com'
+  },
+
+  {
+    nickname: 'Karinn',
+    latitude: 30.291916,
+    longitude: -97.724963,
+    phone_id: '1235',
+    rank: 2,
+    email: 'karinnhemingway@gmail.com'
+  },
+
+  {
+    nickname: 'Amy',
+    latitude: 30.2923333,
+    longitude: -97.7247403,
+    phone_id: 'Amy',
+    rank: 1,
+    email: 'amyhton@gmail.com'
+  },
+
+  {
+    nickname: 'Bryant',
+    latitude: 33.768321,
+    longitude: -118.1956168,
+    phone_id: '1337',
+    rank: 4,
+    email: 'amyhton@gmail.com'
+  },
+
+  {
+    nickname: 'Greg',
+    latitude: 30.267153,
+    longitude: -97.7430608,
+    phone_id: '9989',
+    rank: 5,
+    email: 'hild.gregory@gmail.com'
+  }
+])
