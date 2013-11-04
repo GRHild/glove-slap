@@ -51,14 +51,3 @@ users = User.create([
     email: 'hild.gregory@gmail.com'
   }
 ])
-
-devices = Device.create ([
-  {
-    user_id: 1,
-    token: '338DB16ED548E601', 
-    enabled: true,
-    platform: 'Android'
-  }
-
-])
-
