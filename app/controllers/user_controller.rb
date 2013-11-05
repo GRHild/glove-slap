@@ -63,4 +63,11 @@ class UserController < ApplicationController
   #     end
   #   end
   # end
+
+  def rank
+    # grab all users in the database
+    # sort by rank in descending order
+    # show only the first 5
+    @all_users = User.order(rank: :asc).first(5)
+  end
 end
