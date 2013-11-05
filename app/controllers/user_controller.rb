@@ -25,10 +25,10 @@ class UserController < ApplicationController
   end
 
   def update_gravatar
-    @user = User.find_by(phone_id: params[:phone_id])
+    @user = User.find_by(id: params[:user_id])
 
-    if not @user.email
-      @user.update(email: params[:email])
+    if params[:email].present?
+      @user.update(email: params[:email].downcase)
     end
 
     render :json => @user.to_json , :status => 200
