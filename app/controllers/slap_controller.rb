@@ -45,7 +45,12 @@ class SlapController < ApplicationController
     @incoming_slaps = Slap.where(target_id: @user.id, status: "pending")
     @outgoing_slaps = Slap.where(challenger_id: @user.id, status: "pending")
 
-    render :json => { incoming_slaps: @incoming_slaps }, :status => 200
+    out = {
+      incoming_slaps: @incoming_slaps,
+      outgoing_slaps: @outgoing_slaps
+    }
+
+    render :json => out, :status => 200
   end
 
 end
