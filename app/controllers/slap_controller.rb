@@ -40,4 +40,12 @@ class SlapController < ApplicationController
     render :json => { status: "ok" }, :status => 200
   end
 
+  def index
+    @user = User.where(phone_id: params[:phone_id]).first
+    @incoming_slaps = Slap.where(target_id: @user.id, status: "pending")
+    @outgoing_slaps = Slap.where(challenger_id: @user.id, status: "pending")
+
+    render :json => { incoming_slaps: @incoming_slaps }, :status => 200
+  end
+
 end
