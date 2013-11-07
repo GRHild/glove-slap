@@ -1,4 +1,6 @@
 GloveSlap::Application.routes.draw do
+  root: "user/profile"
+
   scope :api do
     post "user/location" => "user#update_location"
     post "user/:user_id/slap" => "slap#create"
